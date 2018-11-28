@@ -127,15 +127,16 @@ public class HugeInteger {
 
         int carry = 0;  //remainder in here
         //Loop through all the array, beyond largest value is '0' anyway
-        for(int i = 0; i< HUGE_INT_SIZE; i++){
+        for(int i = 0; i< HUGE_INT_SIZE; i++) {
 
-        }            //convert the digits to ints and add them with the remainder
-        int sum = Character.getNumericValue(addDigits[i]) +
-                Character.getNumericValue(this.digits[i]) + carry;
-        //First strip out the base 10 value and insert it
-        this.insertDigit(i,Character.forDigit(sum%10,10));
-        //Any value above 10 is stripped off now and carried forward
-        carry = (sum - sum%10)/10;
+            //convert the digits to ints and add them with the remainder
+            int sum = Character.getNumericValue(addDigits[i]) +
+                    Character.getNumericValue(this.digits[i]) + carry;
+            //First strip out the base 10 value and insert it
+            this.insertDigit(i, Character.forDigit(sum % 10, 10));
+            //Any value above 10 is stripped off now and carried forward
+            carry = (sum - sum % 10) / 10;
+        }
     }
 
 

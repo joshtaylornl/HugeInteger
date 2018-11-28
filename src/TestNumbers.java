@@ -1,3 +1,6 @@
+/**
+ * Simple class to test Huge Integers class
+ */
 public class TestNumbers {
 
     public static void main(String[] args) {
